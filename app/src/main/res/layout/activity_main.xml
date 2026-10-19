@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ScrollView lets user scroll vertically-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+    <!--LinearLayout arranges elements vertically-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <!--Tittle-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payroll Calculator"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+        <!--Hours worked input-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hours Worked"
+            android:textSize="16sp" />
+        <!--Edit text lets user input data-->
+        <EditText
+            android:id="@+id/editHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Example: 45" />
+        <!--Hourly rate input-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hourly Rate ($)"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/editRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Example: 20" />
+        <!--Tax rate input-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tax Rate (0.15 = 15%)"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/editTaxRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Example: 0.15" />
+        <!--Calculate button-->
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Pay"
+            android:layout_marginTop="24dp" />
+        <!--Output-->
+        <TextView
+            android:id="@+id/textPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay: -"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp" />
+        <!--Overtime pay-->
+        <TextView
+            android:id="@+id/textOvertime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overtime Pay: -"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp" />
+        <!--Total pay-->
+        <TextView
+            android:id="@+id/textTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Pay: -"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+        <!--Tax calculated-->
+        <TextView
+            android:id="@+id/textTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tax: -"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp" />
+        <!--About button-->
+        <!--Opens AboutActivity-->
+        <Button
+            android:id="@+id/buttonAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:layout_marginTop="32dp" />
+    </LinearLayout>
+</ScrollView>
